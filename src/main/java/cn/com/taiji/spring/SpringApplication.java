@@ -14,11 +14,12 @@ public class SpringApplication {
 //        ApplicationContext context = new AnnotationConfigApplicationContext("cn.com.taiji.spring");
 //        ApplicationContext context = new AnnotationConfigApplicationContext("cn.com.taiji.spring");
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+//        context.addApplicationListener(new ApplicationStartListener());
         context.register(AppConfig.class);
-//        context.refresh();
-        for ( String beanName:context.getBeanDefinitionNames()){
-            System.out.println(beanName);
-        }
+        context.refresh();
+//        for ( String beanName:context.getBeanDefinitionNames()){
+//            System.out.println(beanName);
+//        }
         CollectionUtils.arrayToList(context.getBeanDefinitionNames()).forEach(item -> System.out.println(item));
     }
 }
