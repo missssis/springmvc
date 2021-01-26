@@ -20,6 +20,8 @@ public class SpringApplication {
 //        for ( String beanName:context.getBeanDefinitionNames()){
 //            System.out.println(beanName);
 //        }
+//        llll
+
         CollectionUtils.arrayToList(context.getBeanDefinitionNames()).forEach(item -> System.out.println(item));
     }
 }
